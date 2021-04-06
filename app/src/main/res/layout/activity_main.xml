@@ -12,6 +12,7 @@
         android:id="@+id/edit_txt_search_phn_num"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:hint="Search phone Number"/>
 
     <androidx.recyclerview.widget.RecyclerView

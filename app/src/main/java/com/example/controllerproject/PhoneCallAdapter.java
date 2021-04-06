@@ -2,12 +2,14 @@ package com.example.controllerproject;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -56,7 +58,7 @@ public class PhoneCallAdapter extends RecyclerView.Adapter<PhoneCallAdapter.Phon
             holder.circleImageViewProfile.setVisibility(View.VISIBLE);
         }
 
-        holder.btn_phone_call.setOnClickListener(new View.OnClickListener() {
+        holder.imageButton_phone_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String phone = contacts.get(position).getPhoneNumber();
@@ -75,14 +77,14 @@ public class PhoneCallAdapter extends RecyclerView.Adapter<PhoneCallAdapter.Phon
     }
 
     public class PhoneCallViewHolder extends RecyclerView.ViewHolder {
-        Button btn_phone_call;
+        ImageButton imageButton_phone_call;
         TextView text_name,text_phoneNumber,text_identifier;
         public LinearLayout linearLayoutContact;
         public CircleImageView circleImageViewProfile;
         CardView mIdentifierCard ;
         public PhoneCallViewHolder(@NonNull View itemView) {
             super(itemView);
-            btn_phone_call = itemView.findViewById(R.id.btn_call);
+            imageButton_phone_call = itemView.findViewById(R.id.image_btn_call);
             text_identifier = itemView.findViewById(R.id.text_identifier);
             text_name = itemView.findViewById(R.id.display_contactName);
             text_phoneNumber = itemView.findViewById(R.id.display_contactPhoneNumber);
